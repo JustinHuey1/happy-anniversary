@@ -11,6 +11,10 @@ if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay){
 }
 
 console.log(anniversaryMonth);
-console.log(anniversaryDate);
+console.log(anniversaryDay);
 console.log(todaysMonth);
 console.log(todaysDay);
+
+$("#confirm").click(function(){
+
+})
