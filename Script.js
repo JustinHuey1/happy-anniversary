@@ -1,4 +1,4 @@
-var anniversaryDate = new Date("2022-07-22");
+var anniversaryDate = new Date("2023-07-22");
 var anniversaryMonth = anniversaryDate.getUTCMonth();
 var anniversaryDay = anniversaryDate.getUTCDate();
 
