@@ -30,7 +30,7 @@ var x = setInterval(function() {
 
 function confirmClick(prompt) {
     if (confirm(prompt) === true) {
-        alert("I love you moreeeeeeeeeeeeeeeeeeeeeee");
+        alert("I love you moreeeeeeeeeeeeeeeeeeeeeee\n hehe");
       } else {
         confirmClick('I SAID I LOVE YOU!!!!! DO YOU LOVE ME HUH HUH?\nOk for yes and cancel for no');
       }
