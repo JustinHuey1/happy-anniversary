@@ -33,10 +33,10 @@ var x = setInterval(function() {
     }
 }, 1000);
 
-function confirmClick(prompt) {;
-    if (confirm(prompt) == true) {
+function confirmClick(prompt) {
+    if (confirm(prompt) === true) {
         alert("I love you moreeeeeeeeeeeeeeeeeeeeeee");
       } else {
         confirmClick('I SAID I LOVE YOU!!!!! DO YOU LOVE ME HUH HUH?\nOk for yes and cancel for no');
       }
-};
+}
