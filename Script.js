@@ -10,11 +10,6 @@ if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay){
     alert("HAPPY ANNIVERSARY BEBE!!!");
 }
 
-console.log(anniversaryMonth);
-console.log(anniversaryDay);
-console.log(todaysMonth);
-console.log(todaysDay);
-
 var countDownDate = anniversaryDate.getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
