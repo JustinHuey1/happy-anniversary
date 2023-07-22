@@ -15,25 +15,23 @@ console.log(anniversaryDay);
 console.log(todaysMonth);
 console.log(todaysDay);
 
-function updateCountdown() {
-    var countDownDate = anniversaryDate.getTime();
-    var x = setInterval(function() {
-        var now = new Date().getTime();
-            
-        var distance = countDownDate - now;
-            
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-        $("#timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + "until our anniversary");
-            
-        if (distance < 0) {
-            $("#timer").text("OUR ANNIVERSARY IS TODAY!");
-        }
+var countDownDate = anniversaryDate.getTime();
+var x = setInterval(function() {
+    var now = new Date().getTime();
+        
+    var distance = countDownDate - now;
+        
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+    $("#timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + "until our anniversary");
+        
+    if (distance < 0) {
+        $("#timer").text("OUR ANNIVERSARY IS TODAY!");
+    }
 }, 1000);
-}
 
 function confirmClick(prompt) {;
     if (confirm(prompt) == true) {
