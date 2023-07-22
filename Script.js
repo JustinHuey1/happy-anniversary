@@ -9,3 +9,5 @@ var todaysDay = todaysDate.getDate();
 if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay){
     alert("HAPPY ANNIVERSARY BEBE!!!")
 }
+
+console.log(todaysDate);
