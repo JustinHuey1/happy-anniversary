@@ -7,7 +7,10 @@ var todaysMonth = todaysDate.getMonth();
 var todaysDay = todaysDate.getDate();
 
 if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay){
-    alert("HAPPY ANNIVERSARY BEBE!!!")
+    alert("HAPPY ANNIVERSARY BEBE!!!");
 }
 
-console.log(todaysDate);
+console.log(anniversaryMonth);
+console.log(anniversaryDate);
+console.log(todaysMonth);
+console.log(todaysDay);
