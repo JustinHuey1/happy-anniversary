@@ -21,17 +21,26 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-    $("#timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + "until our anniversary");
+    $("#countdown").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + "until our anniversary");
         
     if (distance < 0) {
-        $("#timer").text("OUR ANNIVERSARY IS TODAY!");
+        $("#countdown").text("OUR ANNIVERSARY IS TODAY!");
     }
 }, 1000);
+
+var huhCounter = 0;
 
 function confirmClick(prompt) {
     if (confirm(prompt) === true) {
         alert("I love you moreeeeeeeeeeeeeeeeeeeeeee\n hehe");
-      } else {
-        confirmClick('I SAID I LOVE YOU!!!!! DO YOU LOVE ME HUH HUH?\nOk for yes and cancel for no');
+    } else {
+        huhCounter += 1;
+
+        var huhText = '';
+        for (var i = 0; i < huhCounter; i++) {
+            huhText += ' HUH'
+        }
+        confirmClick('I SAID I LOVE YOU!!!!! DO YOU LOVE ME' + huhText + '?\nOk for yes and cancel for no');
       }
 }
+

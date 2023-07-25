@@ -1,1 +1,84 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
+    background: linear-gradient(107deg, rgb(246, 195, 211) 0%, rgb(225, 129, 141) 37%, rgb(32, 181, 232) 100%);    
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 15%;
+    font-size: 350%;
+}
+
+#heheButton {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5%;
+}
+
+#confirm {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+    font-size: 300%;
+    padding: 2% 2%;
+
+    background-color: pink;
+    color: white;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    border-radius: 25px;
+
+    opacity: 0.6;
+}
+
+#confirm:active {
+    background-color: #e75480;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#confirm:hover {
+    opacity: 2;
+}
+
+#confirm:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#confirm:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
