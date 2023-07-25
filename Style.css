@@ -1,21 +1,34 @@
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@font-palette-values --Pink {
+    font-family: Rocher;
+    base-palette: 7;
+}
+
 html {
     height: 100%;
 }
-body {
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 
+body {
     background: linear-gradient(107deg, rgb(246, 195, 211) 0%, rgb(225, 129, 141) 37%, rgb(32, 181, 232) 100%);    
+    overflow: hidden;
 }
 
 #countdown {
     display: flex;
     justify-content: center;
 
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 350%;
+
+    order: 2;
+    color: white;
+    font-weight: 900;
+
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
 }
 
 #heheButton {
@@ -33,27 +46,29 @@ body {
     z-index: 0;
     border-radius: 10px;
 
-    font-size: 300%;
-    padding: 2% 2%;
+    font-size: 500%;
+    padding: 3% 3%;
 
     background-color: pink;
     color: white;
 
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
     border-radius: 25px;
 
     opacity: 0.6;
+    font-family: 'Rocher';
+    font-palette: --Pink;
+    
+    text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff,
+    3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb,
+    6px 4px 1px #4af7ff, 5px 5px 1px #165bfb, 7px 5px 1px #4af7ff,
+    6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb,
+    9px 7px 1px #4af7ff;
 }
 
 #confirm:active {
     background-color: #e75480;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
-
-#confirm:hover {
-    opacity: 2;
 }
 
 #confirm:before {
@@ -82,3 +97,108 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+#letter {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.heart-container {
+    float: left;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    -moz-animation-duration: 8s;
+    -moz-animation-name: fall;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-name: fall;
+    -webkit-animation-timing-function: linear;
+}
+@-moz-keyframes fall {
+    from {
+        top: -20px;
+    }
+    to {
+        top: 100%;
+    }
+}
+@-webkit-keyframes fall {
+    from {
+        top: -10%;
+    }
+    to {
+        top: 100%;
+    }
+}
+.heart {
+    overflow: hidden;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: swing;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -moz-transform-origin: center center;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: swing;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-transform-origin: center center;
+}
+@-moz-keyframes swing {
+    from {
+        -moz-transform: rotate(-45deg) translateX(10px);
+    }
+    to {
+        -moz-transform: rotate(45deg) translateX(-10px);
+    }
+}
+@-moz-keyframes spin {
+    from {
+        -moz-transform: scaleX(1) translateX(5px);
+    }
+    50% {
+        -moz-transform: scaleX(0.1);
+    }
+    to {
+        -moz-transform: scaleX(1) translateX(-5px);
+    }
+}
+@-webkit-keyframes swing {
+    from {
+        -webkit-transform: rotate(-45deg) translateX(10px);
+    }
+    to {
+        -webkit-transform: rotate(45deg) translateX(-10px);
+    }
+}
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: scaleX(1) translateX(5px);
+    }
+    50% {
+        -webkit-transform: scaleX(0.1);
+    }
+    to {
+        -webkit-transform: scaleX(1) translateX(-5px);
+    }
+}
+
