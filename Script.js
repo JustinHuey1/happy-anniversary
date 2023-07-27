@@ -1,10 +1,19 @@
-var anniversaryDate = new Date("2023-07-29");
-var anniversaryMonth = anniversaryDate.getUTCMonth();
-var anniversaryDay = anniversaryDate.getUTCDate();
+var anniversaryDate = new Date("2022-07-29 GMT-7:00");
+var anniversaryMonth = anniversaryDate.getMonth();
+var anniversaryDay = anniversaryDate.getDate();
 
 var todaysDate = new Date();
-var todaysMonth = todaysDate.getUTCMonth();
-var todaysDay = todaysDate.getUTCDate();
+var todaysMonth = todaysDate.getMonth();
+var todaysDay = todaysDate.getDate();
+
+var countDownDate = anniversaryDate.getTime();
+var now = new Date().getTime();
+
+while(countDownDate - now < 0) {
+  anniversaryDate.setFullYear(anniversaryDate.getFullYear() + 1);
+
+  countDownDate = anniversaryDate.getTime();
+}
 
 if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay){
     alert("HAPPY ANNIVERSARY BEBE!!!");
@@ -34,9 +43,9 @@ if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay){
     setTimeout(newHeart, 200);
 }
 
-var countDownDate = anniversaryDate.getTime();
+
 var x = setInterval(function() {
-    var now = new Date().getTime();
+    now = new Date().getTime();
         
     var distance = countDownDate - now;
         
@@ -47,7 +56,7 @@ var x = setInterval(function() {
         
     $("#countdown").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s " + "until our anniversary");
         
-    if (distance < 0) {
+    if (anniversaryMonth === todaysMonth && anniversaryDay === todaysDay) {
         $("#countdown").html("OUR ANNIVERSARY IS TODAY!");
     }
 }, 1000);
